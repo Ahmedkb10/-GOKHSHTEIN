@@ -19,7 +19,9 @@ const config = {
     },
 
     scene: {
-        create: create
+        preload: preload,
+        create: create,
+        update: update
     }
 
 };
@@ -28,16 +30,52 @@ const config = {
 const game = new Phaser.Game(config);
 
 
+let bull;
+
+
+function preload() {
+
+}
+
+
 function create() {
 
-    this.add.text(
-        250,
+    // Create White Bull body
+    bull = this.add.circle(
         200,
-        "⚪🐂 WHITE BULL AWAKENS",
+        250,
+        40,
+        0xffffff
+    );
+
+
+    // Add the G on the forehead
+    this.add.text(
+        185,
+        220,
+        "G",
         {
-            fontSize: "32px",
-            fill: "#ffffff"
+            fontSize: "35px",
+            color: "#FFD700",
+            fontStyle: "bold"
         }
     );
+
+
+    this.add.text(
+        260,
+        80,
+        "⚪🐂 GOKHSHTEIN THE WHITE BULL",
+        {
+            fontSize: "28px",
+            color: "#ffffff"
+        }
+    );
+
+}
+
+
+function update() {
+
 
 }
