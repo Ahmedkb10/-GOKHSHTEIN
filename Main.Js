@@ -79,3 +79,4 @@ function update() {
 
 
 }
+console.log("White Bull deployed successfully");
