@@ -46,12 +46,14 @@ function preload() {
 function create() {
 
     // Create White Bull body
-    bull = this.add.circle(
-        200,
-        250,
-        40,
-        0xffffff
-    );
+  // Create White Bull character
+bull = this.add.image(
+    200,
+    250,
+    "whiteBull"
+);
+
+bull.setScale(0.5);
 
 
     // Add the G on the forehead
