@@ -35,6 +35,11 @@ let bull;
 
 function preload() {
 
+    this.load.image(
+        "whiteBull",
+        "white-bull.png"
+    );
+
 }
 
 
